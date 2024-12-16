@@ -1,1 +1,8 @@
+style
 @import "~bootstrap/dist/css/bootstrap.min.css";
+input {
+  width: 100%;
+}
+p {
+  margin: 0;
+}
