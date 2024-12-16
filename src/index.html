@@ -1,29 +1,96 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-      crossorigin="anonymous"
-    />
-    <link rel="shortcut icon" href="./4geeks.ico" />
-  </head>
   <body>
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
-      </div>
-    </div>
+    <h2>JavaScript Functions</h2>
+
+    <p>
+      Estos es un Generador de Escusas en JavaScript
+    </p>
+    <p>La Escusa es:</p>
+
+    <p id="demo"></p>
+    <script>
+      let who = ["The dog", "My grandma", "The mailman", "My bird"];
+      let action = ["ate", "peed", "crushed", "broke"];
+      let what = ["my homework", "my phone", "the car"];
+      let when = [
+        "before the class",
+        "when I was sleeping",
+        "while I was exercising",
+        "during my lunch",
+        "while I was praying"
+      ];
+
+      function Who() {
+        let randomNumberWho = Math.floor(Math.random() * 4);
+        if (randomNumberWho == 0) {
+          console.log(who[0]);
+          return (Who = [who[0]]);
+        } else if (randomNumberWho == 1) {
+          console.log(who[1]);
+          return (Who = [who[1]]);
+        } else if (randomNumberWho == 2) {
+          console.log(who[2]);
+          return (Who = [who[2]]);
+        } else if (randomNumberWho == 3) {
+          console.log(who[3]);
+          return (Who = [who[3]]);
+        }
+      }
+
+      function Action() {
+        let randomNumberAction = Math.floor(Math.random() * 4);
+        if (randomNumberAction == 0) {
+          console.log(action[0]);
+          return (Action = [action[0]]);
+        } else if (randomNumberAction == 1) {
+          console.log(action[1]);
+          return (Action = [action[1]]);
+        } else if (randomNumberAction == 2) {
+          console.log(action[2]);
+          return (Action = [action[2]]);
+        } else if (randomNumberAction == 3) {
+          console.log(action[3]);
+          return (Action = [action[3]]);
+        }
+      }
+
+      function What() {
+        let randomNumberWhat = Math.floor(Math.random() * 3);
+        if (randomNumberWhat == 0) {
+          console.log(what[0]);
+          return (What = [what[0]]);
+        } else if (randomNumberWhat == 1) {
+          console.log(what[1]);
+          return (What = [what[1]]);
+        } else if (randomNumberWhat == 2) {
+          console.log(what[2]);
+          return (What = [what[2]]);
+        }
+      }
+
+      function When() {
+        let randomNumberWhen = Math.floor(Math.random() * 5);
+        if (randomNumberWhen == 0) {
+          console.log(when[0]);
+          return (When = [when[0]]);
+        } else if (randomNumberWhen == 1) {
+          console.log(when[1]);
+          return (When = [when[1]]);
+        } else if (randomNumberWhen == 2) {
+          console.log(when[2]);
+          return (When = [when[2]]);
+        } else if (randomNumberWhen == 3) {
+          console.log(when[3]);
+          return (When = [when[3]]);
+        } else if (randomNumberWhen == 4) {
+          console.log(when[4]);
+          return (When = [when[4]]);
+        }
+      }
+
+      document.getElementById("demo").innerHTML =
+        Who(Who) + " " + Action(Action) + " " + What(What) + " " + When(When);
+    </script>
   </body>
 </html>
